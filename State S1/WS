@@ -1,0 +1,1464 @@
+% --- VVER-1000 MOX Core Computational Benchmark --------------------------------------
+%U4.20-uranium fuel with enrichment 4.2% and 0 MWd/kg burnup
+%U4.215-uranium fuel with enrichment 4.2% and 15 MWd/kg burnup
+%U4.232-uranium fuel with enrichment 4.2% and 32 MWd/kg burnup
+%U4.240-uranuim fuel with enrichment 4.2% and 40 MWd/kg burnup
+%TVEG50-fuel with gadolinium and 0 MWd/kg burnup
+%TVEG515-fuel with gadolinium and 15 MWd/kg burnup
+%TVEG532-fuel with gadolinium and 32 MWd/kg burnup
+%TVEG540-fuel with gadolinium and 40 MWd/kg burnup
+%U3.70-uranium fuel with enrichment 3.7% and 0 MWd/kg burnup
+%U3.715-uranium fuel with enrichment 3.7% and 15 MWd/kg burnup
+%U3.732-uranium fuel with enrichment 3.7% and 32 MWd/kg burnup
+%U3.740-uranium fuel with enrichment 3.7% and 40 MWd/kg burnup
+%PU3.60-MOX fuel with enrichment 3.6% and 0 MWd/kg burnup
+%PU3.617-MOX fuel with enrichment 3.6% and 17 MWd/kg burnup
+%PU3.633-MOX fuel with enrichment 3.6% and 33 MWd/kg burnup
+%TVEG40-fuel with gadolinium and 0 MWd/kg burnup
+%TVEG417-fuel with gadolinium and 17 MWd/kg burnup
+%TVEG433-fuel with gadolinium and 33 MWd/kg burnup
+%PU2.70-MOX fuel with enrichment 2.7% and 0 MWd/kg burnup
+%PU2.717-MOX fuel with enrichment 2.7% and 17 MWd/kg burnup
+%PU2.733-MOX fuel with enrichment 2.7% and 33 MWd/kg burnup
+%PU2.40-MOX fuel with with enrichment 2.4% and 0 MWd/kg burnup
+%PU2.417-MOX fuel with enrichment 2.4% and 17 MWd/kg burnup
+%PU2.433-MOX fuel with enrichment 2.4% and 33 MWd/kg burnup
+%bor-boron absorber in FA
+
+set title "VVER-1000 MOX Core Computational Benchmark"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Pincells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pin 1
+U4.20   0.3860
+clad    0.4550
+water 
+
+pin 1.1
+U4.215    0.3860
+clad      0.4550
+water
+
+pin 1.2
+U4.232    0.3860
+clad      0.4550
+water
+
+pin 1.3
+U4.240    0.3860
+clad      0.4550
+water
+
+pin 2
+TVEG50    0.3860
+clad      0.4550
+water
+
+pin 2.1
+TVEG515   0.3860
+clad      0.4550
+water
+
+pin 2.2
+TVEG532   0.3860
+clad      0.4550
+water
+
+pin 2.3
+TVEG540   0.3860
+clad      0.4550
+water
+
+pin 3
+U3.70     0.3860
+clad      0.4550
+water
+
+pin 3.1
+U3.715    0.3860
+clad      0.4550
+water
+
+pin 3.2
+U3.732    0.3860
+clad      0.4550
+water
+
+pin 3.3
+U3.740    0.3860
+clad      0.4550
+water
+
+pin 4
+PU3.60    0.3860
+clad      0.4550
+water
+
+pin 4.1
+PU3.617   0.3860
+clad      0.4550
+water
+
+pin 4.2
+PU3.633   0.3860
+clad      0.4550
+water
+
+pin 5
+TVEG40    0.3860
+clad      0.4550
+water
+
+pin 5.1
+TVEG417   0.3860
+clad      0.4550
+water
+
+pin 5.2
+TVEG433   0.3860
+clad      0.4550
+water
+
+pin 6
+PU2.70    0.3860
+clad      0.4550
+water
+
+pin 6.1
+PU2.717   0.3860
+clad      0.4550
+water
+
+pin 6.2
+PU2.733   0.3860
+clad      0.4550
+water
+
+pin 7
+PU2.40    0.3860
+clad      0.4550
+water
+
+pin 7.1
+PU2.417   0.3860
+clad      0.4550
+water
+
+pin 7.2
+PU2.433   0.3860
+clad      0.4550
+water
+
+%pin 8
+%bor        0.35
+%steel      0.41
+%water      0.55
+%clad       0.63
+%water
+
+pin 9 
+water     0.550
+clad      0.630
+water
+
+pin W
+water
+ 
+pin H
+water1 3.5
+steel
+
+pin ste
+steel
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Surfaces
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+surf 1   hexxc    0.0    0.0    11.8
+surf 6   cyl      0.0    0.0    4.9
+surf 11  cyl      0.0    0.0  175.0
+surf 12  cyl      0.0    0.0  181.0
+surf 13  cyl      0.0    0.0  206.8
+surf 14  cyl      0.0    0.0  226.75
+
+surf  ch01 cylz     162.0     0.0     5.0 %central hole%
+surf  ch02 cylz     160.9     38.4    3.5 
+surf  ch03 cylz     160.9     47.0    3.5 
+surf  ch04 cylz     156.6     54.5    3.5 
+surf  ch05 cylz     149.1     58.8    3.5 
+surf  ch06 cylz     149.1     67.4    3.5 
+surf  ch07 cylz     144.8     74.9    3.5 
+surf  ch08 cylz     137.3     79.2    3.5 
+surf  ch09 cylz     144.8     83.6    3.5 
+surf  ch10 cylz      47.195  158.543  3.5 
+surf  ch11 cylz    -113.705  120.143  3.5 
+surf  ch12 cylz    -160.9    -38.4    3.5 
+surf  ch13 cylz     -47.195 -158.544  3.5 
+surf  ch14 cylz     113.705 -120.143  3.5 
+surf  ch15 cylz      39.747  162.843  3.5 
+surf  ch16 cylz    -121.153  115.843  3.5 
+surf  ch17 cylz    -160.9    -47.0    3.5 
+surf  ch18 cylz     -39.75  -162.843  3.5 
+surf  ch19 cylz     121.153 -115.843  3.5 
+surf  ch20 cylz      31.102  162.87   3.5 
+surf  ch21 cylz    -125.498  108.370  3.5 
+surf  ch22 cylz    -156.6    -54.5    3.5 
+surf  ch23 cylz     -31.102 -162.870  3.5 
+surf  ch24 cylz     125.498 -108.370  3.5 
+surf  ch25 cylz      23.628  158.524  3.5 
+surf  ch26 cylz    -125.472   99.724  3.5 
+surf  ch27 cylz    -149.1    -58.8    3.5 
+surf  ch28 cylz     -23.628 -158.524  3.5
+surf  ch29 cylz     125.472  -99.724  3.5
+surf  ch30 cylz      16.18   162.824  3.5
+surf  ch31 cylz    -132.92    95.424  3.5
+surf  ch32 cylz    -149.1    -67.4    3.5
+surf  ch33 cylz     -16.18  -162.824  3.5
+surf  ch34 cylz     132.920  -95.424  3.5
+surf  ch35 cylz       7.535  162.851  3.5
+surf  ch36 cylz    -137.265   87.951  3.5
+surf  ch37 cylz    -144.8    -74.9    3.5
+surf  ch38 cylz      -7.535 -162.851  3.5
+surf  ch39 cylz     137.265  -87.951  3.5
+surf  ch40 cylz     -162.0      0.0    5.0 % central hole
+surf  ch41 cylz      81.0    140.296  5.0 % central hole
+surf  ch42 cylz    -137.3    -79.2    3.5
+surf  ch43 cylz      81.0   -140.296  5.0 % central hole
+surf  ch44 cylz     -81.0    140.296  5.0 % central hole
+surf  ch45 cylz       0.0    167.2    3.5
+surf  ch46 cylz    -144.8     83.6    3.5
+surf  ch47 cylz    -144.8    -83.6    3.5
+surf  ch48 cylz       0.0   -167.2    3.5
+surf  ch49 cylz     144.8    -83.6    3.5
+surf  ch50 cylz     160.9    -38.4    3.5
+surf  ch51 cylz     113.705  120.144  3.5
+surf  ch52 cylz     -47.195  158.543  3.5
+surf  ch53 cylz    -160.9     38.4    3.5
+surf  ch54 cylz    -113.705 -120.143  3.5
+surf  ch55 cylz      47.195 -158.543  3.5
+surf  ch56 cylz     160.9    -47.0    3.5
+surf  ch57 cylz     121.153  115.843  3.5
+surf  ch58 cylz     -39.747  162.843  3.5
+surf  ch59 cylz    -160.9     47.0    3.5
+surf  ch60 cylz    -121.153 -115.843  3.5
+surf  ch61 cylz      39.747 -162.843  3.5
+surf  ch62 cylz     156.6    -54.5    3.5
+surf  ch63 cylz     125.5    108.37   3.5
+surf  ch64 cylz     -31.102  162.870  3.5
+surf  ch65 cylz    -156.6     54.5    3.5
+surf  ch66 cylz    -125.5   -108.37   3.5
+surf  ch67 cylz      31.102 -162.87   3.5
+surf  ch68 cylz     149.1    -58.8    3.5
+surf  ch69 cylz     125.5     99.7    3.5
+surf  ch70 cylz     -23.6    158.5    3.5
+surf  ch71 cylz    -149.1     58.8    3.5
+surf  ch72 cylz    -125.472  -99.7    3.5
+surf  ch73 cylz      23.6   -158.5    3.5
+surf  ch74 cylz     149.1    -67.4    3.5
+surf  ch75 cylz     132.9     95.4    3.5
+surf  ch76 cylz     -16.18   162.824  3.5
+surf  ch77 cylz    -149.1     67.4    3.5
+surf  ch78 cylz    -132.9    -95.4    3.5
+surf  ch79 cylz      16.18  -162.824  3.5
+surf  ch80 cylz     144.8    -74.9    3.5
+surf  ch81 cylz     137.265   87.951  3.5    
+surf  ch82 cylz      -7.535  162.851  3.5    
+surf  ch83 cylz    -144.8     74.9    3.5  
+surf  ch84 cylz    -137.2655 -87.951  3.5    
+surf  ch85 cylz       7.535 -162.851  3.5    
+surf  ch86 cylz     137.3    -79.2    3.5  
+surf  ch87 cylz     -81.0   -140.296  5.0    
+surf  ch88 cylz      -0.061  158.505  3.5    
+surf  ch89 cylz    -137.3     79.2    3.5  
+%surf  ch90 cylz    -137.239  -79.305  3.5    
+surf  ch91 cylz       0.061 -158.505  3.5    
+%surf  ch92 cylz     144.8    -83.6    3.5  
+%surf  ch93 cylz     144.8     83.6    3.5  
+%surf  ch94 cylz       0.0    167.2    3.5  
+%surf  ch95 cylz     -144.8    83.6    3.5  
+%surf  ch96 cylz     -144.8   -83.6    3.5  
+%surf  ch97 cylz        0.0  -167.2    3.5  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Lattices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- water lattice:
+
+lat 20  3  0.0 0.0 23 23 1.275
+
+ W W W W W W W W W W W W W W W W W W W W W W W 
+  W W W W W W W W W W W W W W W W W W W W W W W 
+   W W W W W W W W W W W W W W W W W W W W W W W  
+    W W W W W W W W W W W W W W W W W W W W W W W 
+     W W W W W W W W W W W W W W W W W W W W W W W 
+      W W W W W W W W W W W W W W W W W W W W W W W 
+       W W W W W W W W W W W W W W W W W W W W W W W 
+        W W W W W W W W W W W W W W W W W W W W W W W 
+         W W W W W W W W W W W W W W W W W W W W W W W  
+          W W W W W W W W W W W W W W W W W W W W W W W 
+           W W W W W W W W W W W W W W W W W W W W W W W 
+            W W W W W W W W W W W W W W W W W W W W W W W 
+             W W W W W W W W W W W W W W W W W W W W W W W  
+              W W W W W W W W W W W W W W W W W W W W W W W 
+               W W W W W W W W W W W W W W W W W W W W W W W 
+		        W W W W W W W W W W W W W W W W W W W W W W W  
+		         W W W W W W W W W W W W W W W W W W W W W W W 
+		          W W W W W W W W W W W W W W W W W W W W W W W 
+		           W W W W W W W W W W W W W W W W W W W W W W W  
+		            W W W W W W W W W W W W W W W W W W W W W W W 
+		             W W W W W W W W W W W W W W W W W W W W W W W 
+		              W W W W W W W W W W W W W W W W W W W W W W W 
+		               W W W W W W W W W W W W W W W W W W W W W W W 
+
+
+
+% --- Fresh UOX Lattice with U 6 ifba (type = 2, pin pitch = 1.275 cm):
+
+lat 21  3  0.0 0.0 23 23 1.275
+
+ W W W W W W W W W W W W W W W W W W W W W W W
+  W W W W W W W W W W W 3 3 3 3 3 3 3 3 3 3 3 W
+   W W W W W W W W W W 3 3 1 1 1 1 1 1 1 1 3 3 W 
+    W W W W W W W W W 3 1 1 1 1 1 1 1 1 1 1 1 3 W
+     W W W W W W W W 3 1 1 1 1 1 1 1 1 1 1 1 1 3 W
+      W W W W W W W 3 1 1 1 1 1 1 9 1 1 1 1 1 1 3 W
+       W W W W W W 3 1 1 1 1 9 1 1 1 1 9 1 1 1 1 3 W
+        W W W W W 3 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 3 W
+         W W W W 3 1 1 1 9 1 2 1 9 1 1 1 1 9 1 1 1 3 W 
+          W W W 3 1 1 1 1 1 1 1 1 1 1 9 1 1 1 1 1 1 3 W
+           W W 3 1 1 1 1 1 1 9 1 1 1 1 1 2 1 1 1 1 1 3 W
+            W 3 3 1 1 1 9 1 1 1 1 9 1 1 1 1 9 1 1 1 3 3 W
+             W 3 1 1 1 1 1 2 1 1 1 1 1 9 1 1 1 1 1 1 3 W W 
+              W 3 1 1 1 1 1 1 9 1 1 1 1 1 1 1 1 1 1 3 W W W
+               W 3 1 1 1 9 1 1 1 1 9 1 2 1 9 1 1 1 3 W W W W
+		        W 3 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 3 W W W W W 
+		         W 3 1 1 1 1 9 1 1 1 1 9 1 1 1 1 3 W W W W W W
+		          W 3 1 1 1 1 1 1 9 1 1 1 1 1 1 3 W W W W W W W
+		           W 3 1 1 1 1 1 1 1 1 1 1 1 1 3 W W W W W W W W 
+		            W 3 1 1 1 1 1 1 1 1 1 1 1 3 W W W W W W W W W
+		             W 3 3 1 1 1 1 1 1 1 1 3 3 W W W W W W W W W W
+		              W 3 3 3 3 3 3 3 3 3 3 3 W W W W W W W W W W W
+		               W W W W W W W W W W W W W W W W W W W W W W W 
+					   
+% --- 15 MWd/kg burnup UOX Lattice with U 6 ifba (type = 2, pin pitch = 1.275 cm):
+
+lat 22  3  0.0 0.0 23 23 1.275
+
+ W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   
+  W   W   W   W   W   W   W   W   W   W   W   3.1 3.1 3.1 3.1 3.1 3.1 3.1 3.1 3.1 3.1 3.1 W   
+   W   W   W   W   W   W   W   W   W   W   3.1 3.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 3.1 W    
+    W   W   W   W   W   W   W   W   W   3.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   
+     W   W   W   W   W   W   W   W   3.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   
+      W   W   W   W   W   W   W   3.1 1.1 1.1 1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   
+       W   W   W   W   W   W   3.1 1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1 3.1 W   
+        W   W   W   W   W   3.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 2.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   
+         W   W   W   W   3.1 1.1 1.1 1.1  9  1.1 2.1 1.1  9  1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 3.1 W    
+          W   W   W   3.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   
+           W   W   3.1 1.1 1.1 1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1 1.1 2.1 1.1 1.1 1.1 1.1 1.1 3.1 W   
+            W   3.1 3.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 3.1 3.1 W   
+             W   3.1 1.1 1.1 1.1 1.1 1.1 2.1 1.1 1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   W    
+              W   3.1 1.1 1.1 1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   W   W   
+               W   3.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1  9  1.1 2.1 1.1  9  1.1 1.1 1.1 3.1 W   W   W   W   
+		        W   3.1 1.1 1.1 1.1 1.1 1.1 1.1 2.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   W   W   W   W    
+		         W   3.1 1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1 3.1 W   W   W   W   W   W   
+		          W   3.1 1.1 1.1 1.1 1.1 1.1 1.1  9  1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   W   W   W   W   W   W   
+		           W   3.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   W   W   W   W   W   W   W    
+		            W   3.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 W   W   W   W   W   W   W   W   W   
+		             W   3.1 3.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 3.1 3.1 W   W   W   W   W   W   W   W   W   W   
+		              W   3.1 3.1 3.1 3.1 3.1 3.1 3.1 3.1 3.1 3.1 3.1 W   W   W   W   W   W   W   W   W   W   W   
+		               W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W 					   
+	
+% --- 32 MWd/kg burnup UOX Lattice with U 6 ifba (type = 2, pin pitch = 1.275 cm):
+
+lat 23  3  0.0 0.0 23 23 1.275
+
+ W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   
+  W   W   W   W   W   W   W   W   W   W   W   3.2 3.2 3.2 3.2 3.2 3.2 3.2 3.2 3.2 3.2 3.2 W   
+   W   W   W   W   W   W   W   W   W   W   3.2 3.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 3.2 W    
+    W   W   W   W   W   W   W   W   W   3.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   
+     W   W   W   W   W   W   W   W   3.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   
+      W   W   W   W   W   W   W   3.2 1.2 1.2 1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   
+       W   W   W   W   W   W   3.2 1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2 3.2 W   
+        W   W   W   W   W   3.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 2.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   
+         W   W   W   W   3.2 1.2 1.2 1.2  9  1.2 2.2 1.2  9  1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 3.2 W    
+          W   W   W   3.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   
+           W   W   3.2 1.2 1.2 1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2 1.2 2.2 1.2 1.2 1.2 1.2 1.2 3.2 W   
+            W   3.2 3.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 3.2 3.2 W   
+             W   3.2 1.2 1.2 1.2 1.2 1.2 2.2 1.2 1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   W    
+              W   3.2 1.2 1.2 1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   W   W   
+               W   3.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2  9  1.2 2.2 1.2  9  1.2 1.2 1.2 3.2 W   W   W   W   
+		        W   3.2 1.2 1.2 1.2 1.2 1.2 1.2 2.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   W   W   W   W    
+		         W   3.2 1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2 3.2 W   W   W   W   W   W   
+		          W   3.2 1.2 1.2 1.2 1.2 1.2 1.2  9  1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   W   W   W   W   W   W   
+		           W   3.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   W   W   W   W   W   W   W    
+		            W   3.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 W   W   W   W   W   W   W   W   W   
+		             W   3.2 3.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 3.2 3.2 W   W   W   W   W   W   W   W   W   W   
+		              W   3.2 3.2 3.2 3.2 3.2 3.2 3.2 3.2 3.2 3.2 3.2 W   W   W   W   W   W   W   W   W   W   W   
+		               W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W 	
+
+% --- 40 MWd/kg burnup UOX Lattice with U 6 ifba (type = 2, pin pitch = 1.275 cm):
+					   
+lat 24  3  0.0 0.0 23 23 1.275
+
+ W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   
+  W   W   W   W   W   W   W   W   W   W   W   3.3 3.3 3.3 3.3 3.3 3.3 3.3 3.3 3.3 3.3 3.3 W   
+   W   W   W   W   W   W   W   W   W   W   3.3 3.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 3.3 W    
+    W   W   W   W   W   W   W   W   W   3.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   
+     W   W   W   W   W   W   W   W   3.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   
+      W   W   W   W   W   W   W   3.3 1.3 1.3 1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   
+       W   W   W   W   W   W   3.3 1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3 3.3 W   
+        W   W   W   W   W   3.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 2.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   
+         W   W   W   W   3.3 1.3 1.3 1.3  9  1.3 2.3 1.3  9  1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 3.3 W    
+          W   W   W   3.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   
+           W   W   3.3 1.3 1.3 1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3 1.3 2.3 1.3 1.3 1.3 1.3 1.3 3.3 W   
+            W   3.3 3.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 3.3 3.3 W   
+             W   3.3 1.3 1.3 1.3 1.3 1.3 2.3 1.3 1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   W    
+              W   3.3 1.3 1.3 1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   W   W   
+               W   3.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3  9  1.3 2.3 1.3  9  1.3 1.3 1.3 3.3 W   W   W   W   
+		        W   3.3 1.3 1.3 1.3 1.3 1.3 1.3 2.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   W   W   W   W    
+		         W   3.3 1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3 3.3 W   W   W   W   W   W   
+		          W   3.3 1.3 1.3 1.3 1.3 1.3 1.3  9  1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   W   W   W   W   W   W   
+		           W   3.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   W   W   W   W   W   W   W    
+		            W   3.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 W   W   W   W   W   W   W   W   W   
+		             W   3.3 3.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 1.3 3.3 3.3 W   W   W   W   W   W   W   W   W   W   
+		              W   3.3 3.3 3.3 3.3 3.3 3.3 3.3 3.3 3.3 3.3 3.3 W   W   W   W   W   W   W   W   W   W   W   
+		               W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W 						   
+
+% --- Fresh MOX Lattice with Pu 18 ifba (type = 2, pin pitch = 1.275 cm):
+
+lat 25  3   0.0 0.0 23 23 1.275
+
+ W W W W W W W W W W W W W W W W W W W W W W W
+  W W W W W W W W W W W 7 6 6 6 6 6 6 6 6 6 7 W
+   W W W W W W W W W W 6 5 4 4 4 4 4 4 4 4 5 6 W 
+    W W W W W W W W W 6 4 4 4 4 4 5 4 4 4 4 4 6 W
+     W W W W W W W W 6 4 4 4 4 4 4 4 4 4 4 4 4 6 W
+      W W W W W W W 6 4 4 4 4 4 4 9 4 4 4 4 4 4 6 W
+       W W W W W W 6 4 4 4 4 9 4 4 4 4 9 4 4 4 4 6 W
+        W W W W W 6 4 5 4 4 4 4 4 4 5 4 4 4 4 5 4 6 W
+         W W W W 6 4 4 4 9 4 5 4 9 4 4 4 4 9 4 4 4 6 W 
+          W W W 6 4 4 4 4 4 4 4 4 4 4 9 4 4 4 4 4 4 6 W
+           W W 6 4 4 4 4 4 4 9 4 4 4 4 4 5 4 4 4 4 4 6 W
+            W 7 5 4 4 4 9 4 4 4 4 9 4 4 4 4 9 4 4 4 5 7 W
+             W 6 4 4 4 4 4 5 4 4 4 4 4 9 4 4 4 4 4 4 6 W W 
+              W 6 4 4 4 4 4 4 9 4 4 4 4 4 4 4 4 4 4 6 W W W
+               W 6 4 4 4 9 4 4 4 4 9 4 5 4 9 4 4 4 6 W W W W
+		        W 6 4 5 4 4 4 4 5 4 4 4 4 4 4 5 4 6 W W W W W 
+		         W 6 4 4 4 4 9 4 4 4 4 9 4 4 4 4 6 W W W W W W
+		          W 6 4 4 4 4 4 4 9 4 4 4 4 4 4 6 W W W W W W W
+		           W 6 4 4 4 4 4 4 4 4 4 4 4 4 6 W W W W W W W W 
+		            W 6 4 4 4 4 4 5 4 4 4 4 4 6 W W W W W W W W W
+		             W 6 5 4 4 4 4 4 4 4 4 5 6 W W W W W W W W W W
+		              W 7 6 6 6 6 6 6 6 6 6 7 W W W W W W W W W W W
+		               W W W W W W W W W W W W W W W W W W W W W W W 
+	
+% --- 17 MWd/kg burnup MOX Lattice with Pu 18 ifba (type = 2, pin pitch = 1.275 cm):
+
+lat 26  3   0.0 0.0 23 23 1.275
+
+ W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W
+  W   W   W   W   W   W   W   W   W   W   W   7.1 6.1 6.1 6.1 6.1 6.1 6.1 6.1 6.1 6.1 7.1 W
+   W   W   W   W   W   W   W   W   W   W   6.1 5.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 5.1 6.1 W 
+    W   W   W   W   W   W   W   W   W   6.1 4.1 4.1 4.1 4.1 4.1 5.1 4.1 4.1 4.1 4.1 4.1 6.1 W
+     W   W   W   W   W   W   W   W   6.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 6.1 W
+      W   W   W   W   W   W   W   6.1 4.1 4.1 4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1 4.1 4.1 6.1 W
+       W   W   W   W   W   W   6.1 4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1 6.1 W
+        W   W   W   W   W   6.1 4.1 5.1 4.1 4.1 4.1 4.1 4.1 4.1 5.1 4.1 4.1 4.1 4.1 5.1 4.1 6.1 W
+         W   W   W   W   6.1 4.1 4.1 4.1  9  4.1 5.1 4.1  9  4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 6.1 W 
+          W   W   W   6.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1 4.1 4.1 6.1 W
+           W   W   6.1 4.1 4.1 4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1 4.1 5.1 4.1 4.1 4.1 4.1 4.1 6.1 W
+            W   7.1 5.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 5.1 7.1 W
+             W   6.1 4.1 4.1 4.1 4.1 4.1 5.1 4.1 4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1 4.1 4.1 6.1 W   W 
+              W   6.1 4.1 4.1 4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 6.1 W   W   W
+               W   6.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1  9  4.1 5.1 4.1  9  4.1 4.1 4.1 6.1 W   W   W   W
+		        W   6.1 4.1 5.1 4.1 4.1 4.1 4.1 5.1 4.1 4.1 4.1 4.1 4.1 4.1 5.1 4.1 6.1 W   W   W   W   W 
+		         W   6.1 4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1 6.1 W   W   W   W   W   W
+		          W   6.1 4.1 4.1 4.1 4.1 4.1 4.1  9  4.1 4.1 4.1 4.1 4.1 4.1 6.1 W   W   W   W   W   W   W
+		           W   6.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 6.1 W   W   W   W   W   W   W   W 
+		            W   6.1 4.1 4.1 4.1 4.1 4.1 5.1 4.1 4.1 4.1 4.1 4.1 6.1 W   W   W   W   W   W   W   W   W
+		             W   6.1 5.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 4.1 5.1 6.1 W   W   W   W   W   W   W   W   W   W
+		              W   7.1 6.1 6.1 6.1 6.1 6.1 6.1 6.1 6.1 6.1 7.1 W   W   W   W   W   W   W   W   W   W   W
+		               W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W 
+
+% --- 33 MWd/kg burnup MOX Lattice with Pu 18 ifba (type = 2, pin pitch = 1.275 cm):
+
+lat 27  3   0.0 0.0 23 23 1.275
+
+ W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W
+  W   W   W   W   W   W   W   W   W   W   W   7.2 6.2 6.2 6.2 6.2 6.2 6.2 6.2 6.2 6.2 7.2 W
+   W   W   W   W   W   W   W   W   W   W   6.2 5.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 5.2 6.2 W 
+    W   W   W   W   W   W   W   W   W   6.2 4.2 4.2 4.2 4.2 4.2 5.2 4.2 4.2 4.2 4.2 4.2 6.2 W
+     W   W   W   W   W   W   W   W   6.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 6.2 W
+      W   W   W   W   W   W   W   6.2 4.2 4.2 4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2 4.2 4.2 6.2 W
+       W   W   W   W   W   W   6.2 4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2 6.2 W
+        W   W   W   W   W   6.2 4.2 5.2 4.2 4.2 4.2 4.2 4.2 4.2 5.2 4.2 4.2 4.2 4.2 5.2 4.2 6.2 W
+         W   W   W   W   6.2 4.2 4.2 4.2  9  4.2 5.2 4.2  9  4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 6.2 W 
+          W   W   W   6.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2 4.2 4.2 6.2 W
+           W   W   6.2 4.2 4.2 4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2 4.2 5.2 4.2 4.2 4.2 4.2 4.2 6.2 W
+            W   7.2 5.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 5.2 7.2 W
+             W   6.2 4.2 4.2 4.2 4.2 4.2 5.2 4.2 4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2 4.2 4.2 6.2 W   W 
+              W   6.2 4.2 4.2 4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 6.2 W   W   W
+               W   6.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2  9  4.2 5.2 4.2  9  4.2 4.2 4.2 6.2 W   W   W   W
+		        W   6.2 4.2 5.2 4.2 4.2 4.2 4.2 5.2 4.2 4.2 4.2 4.2 4.2 4.2 5.2 4.2 6.2 W   W   W   W   W 
+		         W   6.2 4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2 6.2 W   W   W   W   W   W
+		          W   6.2 4.2 4.2 4.2 4.2 4.2 4.2  9  4.2 4.2 4.2 4.2 4.2 4.2 6.2 W   W   W   W   W   W   W
+		           W   6.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 6.2 W   W   W   W   W   W   W   W 
+		            W   6.2 4.2 4.2 4.2 4.2 4.2 5.2 4.2 4.2 4.2 4.2 4.2 6.2 W   W   W   W   W   W   W   W   W
+		             W   6.2 5.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 4.2 5.2 6.2 W   W   W   W   W   W   W   W   W   W
+		              W   7.2 6.2 6.2 6.2 6.2 6.2 6.2 6.2 6.2 6.2 7.2 W   W   W   W   W   W   W   W   W   W   W
+		               W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W   W 	
+	
+% --- Lattice with holes:
+
+% --- 2 holes:
+	
+lat 35  3  0.0  0.0  5  5  8.66
+
+S S S S S 
+ S S H H S
+  S S S S S
+   S S S S S
+    S S S S S
+			
+% --- 3 holes:
+	
+lat 36  3  0.0  0.0  5  5  8.66
+
+S S S S S 
+ S S H H S
+  S H S S S
+   S S S S S
+    S S S S S
+	
+% --- 4 holes:
+	
+lat 37  3  0.0  0.0  5  5  8.66
+
+S S S S S 
+ S S H H S
+  S H H S S
+   S S S S S
+    S S S S S	
+	
+% --- 2 holes addition:
+
+lat 38  3  0.0  0.0  5  5  8.66
+
+S S S S S 
+ S S H S S
+  S H S S S
+   S S S S S
+    S S S S S
+		
+% --- Lattice Core
+lat 40 2 0 0 19 19  23.6
+		 
+100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100  
+ 100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100
+  100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100  
+   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100
+    100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100  
+     100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100
+      100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100  
+       100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100
+        100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100  
+         100   100   100   100   100   100   100   100   100   140   130   160   150   170   150   140   ste   100   100
+          100   100   100   100   100   100   100   100   100   130   150   130   170   130   110   140   ste   100   100  
+           100   100   100   100   100   100   100   100   100   160   170   120   120   160   110   ste   100   100   100
+            100   100   100   100   100   100   100   100   100   150   130   120   120   120   ste   ste   100   100   100  
+             100   100   100   100   100   100   100   100   100   170   130   160   110   ste   ste   100   100   100   100
+              100   100   100   100   100   100   100   100   100   150   110   110   ste   ste   100   100   100   100   100  
+               100   100   100   100   100   100   100   100   100   140   140   ste   ste   100   100   100   100   100   100
+                100   100   100   100   100   100   100   100   100   ste   ste   100   100   100   100   100   100   100   100  
+                 100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100
+                  100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100   100 
+
+
+set usym 40 3 3 0.0 0.0 0 60
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Cells
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- Water lattice: 
+
+cell  100 100  fill 20      -1 
+cell  101 100  water         1 
+
+% --- Fresh UOX Lattice with U 6 ifba: 
+	
+cell  110 110  fill 21      -1  
+cell  112 110  water         1  
+
+% --- 15 MWd/kg burnup UOX Lattice with U 6 ifba:
+
+cell  120 120  fill 22      -1 
+cell  122 120  water         1 
+
+% --- 32 MWd/kg burnup UOX Lattice with U 6 ifba:
+
+cell  130 130  fill 23      -1  
+cell  132 130  water         1  
+
+% --- 40 MWd/kg burnup UOX Lattice with U 6 ifba:
+
+cell  140 140  fill 24      -1
+cell  142 140  water         1
+	
+% --- Fresh MOX Lattice with Pu 18 ifba:
+cell  150 150  fill 25      -1 
+cell  152 150  water         1 
+
+% --- 17 MWd/kg burnup MOX Lattice with Pu 18 ifba:
+cell  160 160  fill 26      -1
+cell  162 160  water         1
+
+% --- 33 MWd/kg burnup MOX Lattice with Pu 18 ifba:
+cell  170 170  fill 27      -1 
+cell  172 170  water         1   
+	
+% --- water hole (type 1) around fuel assmeblies in core:
+cell  180 180  water1       -6 	
+cell  181 180  steel      6 -1 	
+cell  183 180  water1        1 	          
+
+% --- without water hole (type 2) around fuel assmeblies in core:
+cell  190 190  steel        -1 		
+cell  193 190  water1        1 	
+
+% --- water hole 2 pieces (type 3) around fuel assmeblies in core:
+cell  200 200  fill 35      -1 
+cell  201 200  water1        1 
+
+% --- water holes 3 pieces (type 4) around fuel assmeblies in core:
+cell  210 210  fill 36      -1 
+cell  211 210  water1        1 
+
+% --- water holes 4 pieces (type 5) around fuel assmeblies in core:
+cell  220 220  fill 37      -1
+cell  221 220  water1        1
+
+% --- water holes 2 pieces  additional (type 6) around fuel assmeblies in core:
+cell  230 230  fill 38      -1 
+cell  231 230  water1        1 
+
+% --- Core cell: 
+
+cell  300  0  water          -ch01 
+cell  301  0  water          -ch02 
+cell  302  0  water          -ch03 
+cell  303  0  water          -ch04 
+cell  304  0  water          -ch05 
+cell  305  0  water          -ch06 
+cell  306  0  water          -ch07 
+cell  307  0  water          -ch08 
+cell  308  0  water          -ch09 
+cell  309  0  water          -ch10 
+cell  310  0  water          -ch11 
+cell  311  0  water          -ch12 
+cell  312  0  water          -ch13 
+cell  313  0  water          -ch14 
+cell  314  0  water          -ch15 
+cell  315  0  water          -ch16 
+cell  316  0  water          -ch17 
+cell  317  0  water          -ch18 
+cell  318  0  water          -ch19 
+cell  319  0  water          -ch20 
+cell  320  0  water          -ch21 
+cell  321  0  water          -ch22 
+cell  322  0  water          -ch23    
+cell  323  0  water          -ch24    
+cell  324  0  water          -ch25    
+cell  325  0  water          -ch26    
+cell  326  0  water          -ch27    
+cell  327  0  water          -ch28    
+cell  328  0  water          -ch29    
+cell  329  0  water          -ch30    
+cell  330  0  water          -ch31    
+cell  331  0  water          -ch32    
+cell  332  0  water          -ch33    
+cell  333  0  water          -ch34    
+cell  334  0  water          -ch35    
+cell  335  0  water          -ch36    
+cell  336  0  water          -ch37    
+cell  337  0  water          -ch38    
+cell  338  0  water          -ch39    
+cell  339  0  water          -ch40    
+cell  340  0  water          -ch41    
+cell  341  0  water          -ch42    
+cell  342  0  water          -ch43    
+cell  343  0  water          -ch44    
+cell  344  0  water          -ch45    
+cell  345  0  water          -ch46    
+cell  346  0  water          -ch47    
+cell  347  0  water          -ch48    
+cell  348  0  water          -ch49    
+cell  349  0  water          -ch50    
+cell  350  0  water          -ch51    
+cell  351  0  water          -ch52    
+cell  352  0  water          -ch53    
+cell  353  0  water          -ch54    
+cell  354  0  water          -ch55    
+cell  355  0  water          -ch56    
+cell  356  0  water          -ch57    
+cell  357  0  water          -ch58    
+cell  358  0  water          -ch59    
+cell  359  0  water          -ch60    
+cell  360  0  water          -ch61    
+cell  361  0  water          -ch62    
+cell  362  0  water          -ch63    
+cell  363  0  water          -ch64    
+cell  364  0  water          -ch65    
+cell  365  0  water          -ch66    
+cell  366  0  water          -ch67    
+cell  367  0  water          -ch68    
+cell  368  0  water          -ch69    
+cell  369  0  water          -ch70    
+cell  370  0  water          -ch71    
+cell  371  0  water          -ch72    
+cell  372  0  water          -ch73    
+cell  373  0  water          -ch74    
+cell  374  0  water          -ch75    
+cell  375  0  water          -ch76    
+cell  376  0  water          -ch77    
+cell  377  0  water          -ch78    
+cell  378  0  water          -ch79    
+cell  379  0  water          -ch80    
+cell  380  0  water          -ch81    
+cell  381  0  water          -ch82    
+cell  382  0  water          -ch83    
+cell  383  0  water          -ch84    
+cell  384  0  water          -ch85    
+cell  385  0  water          -ch86    
+cell  386  0  water          -ch87    
+cell  387  0  water          -ch88    
+cell  388  0  water          -ch89    
+%cell  389  0  water          -ch90    
+cell  390  0  water          -ch91    
+%cell  391  0  water          -ch92    
+%cell  392  0  water          -ch93    
+%cell  393  0  water          -ch94    
+%cell  394  0  water          -ch95    
+%cell  395  0  water          -ch96    
+%cell  396  0  water          -ch97    
+
+cell  400  0  fill 40      -11	# (-ch01:-ch02:-ch03:-ch04:-ch05:-ch06:-ch07:-ch08:-ch09:-ch10:-ch11:-ch12:-ch13:-ch14:-ch15:-ch16:-ch17:-ch18:-ch19:-ch20:-ch21:-ch22:-ch23:-ch24:-ch25:-ch26:-ch27:-ch28:-ch29:-ch30:-ch31:-ch32:-ch33:-ch34:-ch35:-ch36:-ch37:-ch38:-ch39:-ch40:-ch41:-ch42:-ch43:-ch44:-ch45:-ch46:-ch47:-ch48:-ch49:-ch50:-ch51:-ch52:-ch53:-ch54:-ch55:-ch56:-ch57:-ch58:-ch59:-ch60:-ch61:-ch62:-ch63:-ch64:-ch65:-ch66:-ch67:-ch68:-ch69:-ch70:-ch71:-ch72:-ch73:-ch74:-ch75:-ch76:-ch77:-ch78:-ch79:-ch80:-ch81:-ch82:-ch83:-ch84:-ch85:-ch86:-ch87:-ch88:-ch89:-ch91) 
+cell  410  0  steel     11 -12  
+cell  420  0  water1    12 -13  
+cell  430  0  steel     13 -14	
+cell  440  0  outside       14              
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%              Materials
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- Fuel:
+
+% --- U4.20 (yellow):
+
+mat U4.20   sum  tmp 1027 rgb 255 255 0 burn 1
+92235.09c   9.0411E-04
+92238.09c   2.0362E-02
+ 8016.09c   4.2532E-02
+ 
+% --- U4.215 (orange):
+
+mat U4.215  sum  tmp 1027 rgb 255 128 0 burn 1
+92235.09c   5.8139E-04
+92236.09c   5.7700E-05
+92238.09c   2.0161E-02
+93237.09c   3.7658E-06
+94238.09c   4.5135E-07 
+94239.09c   9.6584E-05
+94240.09c   1.7820E-05
+94241.09c   7.8291E-06
+94242.09c   8.5918E-07
+95241.09c   9.6169E-08 
+ 8016.09c   4.2532E-02
+62149.09c   9.1807E-08
+62151.09c   3.8524E-07
+43099.09c   1.9865E-05
+45103.09c   1.1241E-05
+55133.09c   2.1660E-05
+60143.09c   1.7145E-05
+60145.09c   1.2231E-05
+61147.09c   5.1135E-06
+62152.09c   2.0001E-06
+ 
+% --- U4.232 (red):
+
+mat U4.232  sum  tmp 1027 rgb 255 0 0 burn 1
+92235.09c   3.2990E-04
+92236.09c   9.7452E-05
+92238.09c   1.9905E-02
+93237.09c   1.0351E-05
+94238.09c   2.7546E-06 
+94239.09c   1.2788E-04
+94240.09c   4.4214E-05
+94241.09c   2.4361E-05
+94242.09c   6.9401E-06
+95241.09c   5.7445E-07 
+ 8016.09c   4.2532E-02
+62149.09c   8.9565E-08
+62151.09c   4.9458E-07
+43099.09c   4.0006E-05
+45103.09c   2.2541E-05
+55133.09c   4.3134E-05
+60143.09c   3.0721E-05
+60145.09c   2.3856E-05
+61147.09c   7.0579E-06
+62152.09c   4.0165E-06 
+ 
+% --- U4.240 (maroon):
+
+mat U4.240  sum  tmp 1027 rgb 128 0 0 burn 1
+92235.09c   2.4314E-04
+92236.09c   1.0890E-04
+92238.09c   1.9773E-02
+93237.09c   1.3577E-05
+94238.09c   4.6336E-06 
+94239.09c   1.3134E-04
+94240.09c   5.4717E-05
+94241.09c   3.0501E-05
+94242.09c   1.1811E-05
+95241.09c   8.2251E-07 
+ 8016.09c   4.2532E-02
+62149.09c   8.5421E-08
+62151.09c   5.3181E-07
+43099.09c   4.8545E-05
+45103.09c   2.6925E-05
+55133.09c   5.2008E-05
+60143.09c   3.5092E-05
+60145.09c   2.8579E-05
+61147.09c   7.2585E-06
+62152.09c   4.7868E-06 
+
+% --- TVEG50 (light green):
+
+mat TVEG50  sum  tmp 1027 rgb 0 255 153 burn 1
+92235.09c    6.6163E-04
+92238.09c    1.9143E-02
+ 8016.09c    4.1938E-02
+64152.09c    3.2142E-06
+64154.09c    3.4579E-05
+64155.09c    2.3321E-04
+64156.09c    3.2053E-04
+64157.09c    2.4346E-04
+64158.09c    3.8403E-04
+64160.09c    3.3373E-04
+ 
+% --- TVEG515 (green):
+
+mat TVEG515  sum  tmp 1027 rgb 0 255 0 burn 1
+92235.09c   4.8382E-04
+92236.09c   3.5164E-05
+92238.09c   1.8968E-02
+93237.09c   2.5863E-06
+94238.09c   2.9960E-07
+94239.09c   8.8781E-05
+94240.09c   1.5353E-05
+94241.09c   6.2524E-06
+94242.09c   6.0179E-07
+95241.09c   6.9561E-08
+ 8016.09c   4.1938E-02
+64152.09c   2.2242E-06
+64154.09c   3.1600E-05
+64155.09c   3.2385E-07 
+64156.09c   5.4422E-04
+64157.09c   1.8330E-07 
+64158.09c   6.3019E-04
+64160.09c   3.3229E-04
+62149.09c   8.0821E-08
+62151.09c   3.1290E-07
+43099.09c   1.2031E-05
+45103.09c   7.4977E-06
+55133.09c   1.3175E-05 
+60143.09c   1.0380E-05 
+60145.09c   7.3069E-06
+61147.09c   3.3064E-06
+62152.09c   1.2690E-06
+
+% --- TVEG532 (dark green):
+
+mat TVEG532  sum  tmp 1027 rgb 46 184 46 burn 1
+92235.09c   2.6776E-04
+92236.09c   7.0094E-05
+92238.09c   1.8728E-02
+93237.09c   7.7190E-06
+94238.09c   2.0282E-06
+94239.09c   1.1559E-04
+94240.09c   4.1294E-05
+94241.09c   2.2283E-05
+94242.09c   6.3481E-06
+95241.09c   4.9976E-07
+ 8016.09c   4.1938E-02
+64152.09c   1.1130E-06
+64154.09c   2.7446E-05
+64155.09c   1.5769E-07 
+64156.09c   5.3058E-04
+64157.09c   1.6774E-07 
+64158.09c   6.3494E-04
+64160.09c   3.3037E-04
+62149.09c   8.0584E-08
+62151.09c   4.0538E-07
+43099.09c   3.0625E-05
+45103.09c   1.8625E-05
+55133.09c   3.3172E-05 
+60143.09c   2.3428E-05 
+60145.09c   1.8017E-05
+61147.09c   5.7735E-06
+62152.09c   3.2490E-06
+
+% --- TVEG540 (swamp green):
+
+mat TVEG540  sum  tmp 1027 rgb 85 128 0 burn 1
+92235.09c   1.9449E-04
+92236.09c   8.0032E-05
+92238.09c   1.8603E-02
+93237.09c   1.0347E-05
+94238.09c   3.5111E-06
+94239.09c   1.1801E-04
+94240.09c   5.1119E-05
+94241.09c   2.8043E-05
+94242.09c   1.1103E-05
+95241.09c   7.2654E-07
+ 8016.09c   4.1938E-02
+64152.09c   7.6549E-07
+64154.09c   2.5465E-05
+64155.09c   1.4181E-07 
+64156.09c   5.2333E-04
+64157.09c   1.5847E-07 
+64158.09c   6.3726E-04
+64160.09c   3.2938E-04
+62149.09c   7.7330E-08
+62151.09c   4.4104E-07
+43099.09c   3.8586E-05
+45103.09c   2.2940E-05
+55133.09c   4.1526E-05 
+60143.09c   2.7732E-05 
+60145.09c   2.2419E-05
+61147.09c   6.1251E-06
+62152.09c   3.9837E-06
+
+% --- U3.70 (light pink):
+
+mat U3.70  sum  tmp 1027 rgb 255 153 255 burn 1
+92235.09c   7.9649E-04
+92238.09c   2.0469E-02
+ 8016.09c   4.2530E-02
+		
+% --- U3.715 (pink):
+
+mat U3.715  sum  tmp 1027 rgb 255 0 255 burn 1
+92235.09c   4.8884E-04
+92236.09c   5.4042E-05
+92238.09c   2.0262E-02
+93237.09c   3.7015E-06
+94238.09c   4.6522E-07 
+94239.09c   9.5675E-05
+94240.09c   1.9149E-05
+94241.09c   8.3590E-06
+94242.09c   1.0147E-06
+95241.09c   1.0325E-07 
+ 8016.09c   4.2530E-02
+62149.09c   8.3005E-08
+62151.09c   3.4935E-07
+43099.09c   1.9485E-05
+45103.09c   1.1189E-05
+55133.09c   2.1245E-05
+60143.09c   1.6565E-05
+60145.09c   1.1935E-05
+61147.09c   4.9515E-06
+62152.09c   2.0058E-06 
+
+% --- U3.732 (darkish pink):
+
+mat U3.732  sum  tmp 1027 rgb 204 0 204 burn 1
+92235.09c   2.6496E-04
+92236.09c   8.8494E-05
+92238.09c   2.0000E-02
+93237.09c   9.9287E-06
+94238.09c   2.7516E-06 
+94239.09c   1.2378E-04
+94240.09c   4.5926E-05
+94241.09c   2.4695E-05
+94242.09c   7.7274E-06
+95241.09c   5.7739E-07 
+ 8016.09c   4.2530E-02
+62149.09c   8.2706E-08
+62151.09c   4.5427E-07
+43099.09c   3.8798E-05
+45103.09c   2.2235E-05
+55133.09c   4.1820E-05
+60143.09c   2.9007E-05
+60145.09c   2.2961E-05
+61147.09c   6.7031E-06
+62152.09c   3.9584E-06 
+
+% --- U3.740 (dark pink):
+
+mat U3.740  sum  tmp 1027 rgb 102 0 102 burn 1
+92235.09c    1.9092E-04
+92236.09c    9.7726E-05
+92238.09c    1.9864E-02
+93237.09c    1.2901E-05
+94238.09c    4.5708E-06
+94239.09c    1.2659E-04
+94240.09c    5.6139E-05
+94241.09c    3.0494E-05
+94242.09c    1.2925E-05
+95241.09c    8.0933E-07
+ 8016.09c    4.2530E-02
+62149.09c    7.9571E-08
+62151.09c    4.9115E-07
+43099.09c    4.6961E-05
+45103.09c    2.6478E-05
+55133.09c    5.0289E-05
+60143.09c    3.2889E-05
+60145.09c    2.7419E-05
+61147.09c    6.8639E-06
+62152.09c    4.6994E-06
+
+% --- PU3.60 (light violet):
+
+mat PU3.60  sum  tmp 1027 rgb 204 153 255 burn 1
+92235.09c    4.3057E-05
+92238.09c    2.0386E-02
+94238.09c    1.0841E-06
+94239.09c    7.5661E-04
+94240.09c    5.3794E-05
+94241.09c    9.5720E-06
+94242.09c    3.5119E-06
+ 8016.09c    4.2506E-02
+ 
+% --- PU3.617 (violet):
+
+mat PU3.617  sum  tmp 1027 rgb 204 51 255 burn 1
+92235.09c    3.0534E-05
+92236.09c    2.5385E-06
+92238.09c    2.0144E-02
+93237.09c    2.4045E-06
+94238.09c    1.3292E-06
+94239.09c    4.7406E-04
+94240.09c    1.4795E-04
+94241.09c    5.7132E-05
+94242.09c    9.8236E-06
+95241.09c    1.3594E-06
+ 8016.09c    4.2506E-02
+62149.09c    1.4783E-07
+62151.09c    7.7056E-07
+43099.09c    2.2348E-05
+45103.09c    2.2129E-05
+55133.09c    2.4904E-05
+60143.09c    1.5770E-05
+60145.09c    1.1215E-05
+61147.09c    5.0355E-06
+62152.09c    3.2199E-06
+    
+% --- PU3.633 (dark violet):
+
+mat PU3.633  sum  tmp 1027 rgb 153 0 153 burn 1
+92235.09c    2.0186E-05
+92236.09c    4.2696E-06
+92238.09c    1.9894E-02
+93237.09c    4.2797E-06
+94238.09c    2.7311E-06
+94239.09c    2.9852E-04
+94240.09c    1.7846E-04
+94241.09c    8.3282E-05
+94242.09c    2.5860E-05
+95241.09c    2.9942E-06
+ 8016.09c    4.2506E-02
+62149.09c    1.2062E-07
+62151.09c    7.6447E-07
+43099.09c    4.0862E-05
+45103.09c    3.6232E-05
+55133.09c    4.4872E-05
+60143.09c    2.7603E-05
+60145.09c    2.0679E-05
+61147.09c    6.6403E-06
+62152.09c    5.2658E-06
+
+% --- TVEG40 (light blue):
+
+mat TVEG40  sum  tmp 1027 rgb 102 255 255 burn 1
+92235.09c    7.3225E-04
+92238.09c    1.9143E-02
+ 8016.09c    4.2056E-02
+64152.09c    2.5815E-06
+64154.09c    2.7772E-05
+64155.09c    1.8730E-04
+64156.09c    2.5743E-04
+64157.09c    1.9553E-04
+64158.09c    3.0843E-04
+64160.09c    2.6804E-04
+
+% --- TVEG417 (blue1):
+
+mat TVEG417  sum  tmp 1027 rgb 51 204 255 burn 1
+92235.09c   5.4783E-04
+92236.09c   3.9989E-05
+92238.09c   1.9139E-02
+93237.09c   3.7973E-06
+94238.09c   4.9031E-07
+94239.09c   1.2109E-04
+94240.09c   1.7377E-05
+94241.09c   7.0208E-06
+94242.09c   5.4476E-07
+95241.09c   8.8029E-08
+ 8016.09c   4.2055E-02
+64152.09c   1.8321E-06
+64154.09c   2.5080E-05
+64155.09c   1.0215E-06
+64156.09c   4.3334E-04
+64157.09c   2.5976E-07
+64158.09c   5.0718E-04
+64160.09c   2.6656E-04
+62149.09c   1.0735E-07
+62151.09c   4.0519E-07
+43099.09c   1.2602E-05
+45103.09c   7.9971E-06
+55133.09c   1.3779E-05
+60143.09c   1.0973E-05
+60145.09c   7.6416E-06
+61147.09c   3.2794E-06
+62152.09c   1.2631E-06
+
+% --- TVEG433 (dark blue1):
+
+mat TVEG433  sum  tmp 1027 rgb 0 0 153 burn 1
+92235.09c    3.4998E-04
+92236.09c    7.3537E-05
+92238.09c    1.8901E-02
+93237.09c    9.6340E-06
+94238.09c    2.5298E-06
+94239.09c    1.5184E-04
+94240.09c    4.4993E-05
+94241.09c    2.4072E-05
+94242.09c    5.0595E-06
+95241.09c    5.5623E-07
+ 8016.09c    4.2055E-02
+64152.09c    1.0821E-06
+64154.09c    2.2136E-05
+64155.09c    1.6393E-07
+64156.09c    4.2171E-04
+64157.09c    2.0690E-07
+64158.09c    5.1162E-04
+64160.09c    2.6501E-04
+62149.09c    1.0224E-07
+62151.09c    5.0972E-07
+43099.09c    2.9713E-05
+45103.09c    1.8557E-05
+55133.09c    3.2177E-05
+60143.09c    2.3818E-05
+60145.09c    1.7521E-05
+61147.09c    5.5753E-06
+62152.09c    3.0576E-06
+
+% --- PU2.70 (light grey):
+
+mat PU2.70  sum  tmp 1027 rgb 179 179 204 burn 1
+92235.09c    4.3057E-05
+92238.09c    2.0598E-02
+94238.09c    8.0774E-07
+94239.09c    5.6222E-04
+94240.09c    3.9987E-05
+94241.09c    7.1160E-06
+94242.09c    2.6131E-06
+ 8016.09c    4.2508E-02
+
+% --- PU2.717 (grey):
+
+mat PU2.717  sum  tmp 1027 rgb 117 117 163 burn 1
+92235.09c    2.8612E-05
+92236.09c    2.7944E-06
+92238.09c    2.0347E-02
+93237.09c    2.4008E-06
+94238.09c    1.0993E-06
+94239.09c    3.3450E-04
+94240.09c    1.2215E-04
+94241.09c    4.9442E-05
+94242.09c    9.5258E-06
+95241.09c    1.1240E-06
+ 8016.09c    4.2508E-02
+62149.09c    1.1354E-07
+62151.09c    5.8719E-07
+43099.09c    2.0699E-05
+45103.09c    2.0188E-05
+55133.09c    2.3035E-05
+60143.09c    1.4448E-05
+60145.09c    1.0429E-05
+61147.09c    4.6128E-06
+62152.09c    3.0318E-06
+
+% --- PU2.733 (dark grey):
+
+mat PU2.733 sum  tmp 1027 rgb 82 82 122 burn 1
+92235.09c   1.7606E-05
+92236.09c   4.5372E-06
+92238.09c   2.0087E-02
+93237.09c   4.2361E-06
+94238.09c   2.5148E-06
+94239.09c   2.1853E-04
+94240.09c   1.4136E-04
+94241.09c   6.9024E-05
+94242.09c   2.5765E-05
+95241.09c   2.3584E-06
+ 8016.09c   4.2508E-02
+62149.09c   9.8177E-08
+62151.09c   6.0027E-07
+43099.09c   3.7403E-05
+45103.09c   3.2327E-05
+55133.09c   4.0983E-05
+60143.09c   2.4621E-05
+60145.09c   1.9007E-05
+61147.09c   5.9544E-06
+62152.09c   4.7872E-06
+
+% --- PU2.40 (light cotton candy):
+
+mat PU2.40  sum  tmp 1027 rgb 255 217 179 burn 1
+92235.09c    4.3057E-05
+92238.09c    2.0660E-02
+94238.09c    7.2271E-07
+94239.09c    5.0579E-04
+94240.09c    3.5961E-05
+94241.09c    6.4023E-06
+94242.09c    2.3413E-06
+ 8016.09c    4.2508E-02
+
+% --- PU2.417 (cotton candy):
+
+mat PU2.417  sum  tmp 1027 rgb 255 128 0 burn 1
+92235.09c    2.7777E-05
+92236.09c    2.9076E-06
+92238.09c    2.0405E-02
+93237.09c    2.3897E-06
+94238.09c    1.0335E-06
+94239.09c    2.9332E-04
+94240.09c    1.1497E-04
+94241.09c    4.6985E-05
+94242.09c    9.6174E-06
+95241.09c    1.0464E-06
+ 8016.09c    4.2508E-02
+62149.09c    1.0281E-07
+62151.09c    5.3010E-07
+43099.09c    2.0326E-05
+45103.09c    1.9698E-05
+55133.09c    2.2608E-05
+60143.09c    1.4108E-05
+60145.09c    1.0254E-05
+61147.09c    4.5137E-06
+62152.09c    2.9973E-06
+
+% --- PU2.433 (dark cotton candy):
+
+mat PU2.433 sum  tmp 1027 rgb 153 77 0 burn 1
+92235.09c   1.6391E-05
+92236.09c   4.6650E-06
+92238.09c   2.0140E-02
+93237.09c   4.1976E-06
+94238.09c   2.4576E-06
+94239.09c   1.9329E-04
+94240.09c   1.3072E-04
+94241.09c   6.4083E-05
+94242.09c   2.6319E-05
+95241.09c   2.1281E-06
+ 8016.09c   4.2508E-02
+62149.09c   9.0532E-08
+62151.09c   5.4672E-07
+43099.09c   3.6699E-05
+45103.09c   3.1334E-05
+55133.09c   4.0174E-05
+60143.09c   2.3798E-05
+60145.09c   1.8670E-05
+61147.09c   5.7880E-06
+62152.09c   4.6882E-06
+
+% --- contruction materials:
+
+% --- Cladding material zirconium alloy:
+
+mat clad   sum tmp 575 rgb 150 150 150
+40000.03c  4.257E-02
+41093.03c  4.223E-04
+72000.03c  6.594E-06
+
+% --- Steel (grey)
+
+mat steel   sum tmp 560 rgb 39 41 43 
+26054.03c   3.4678E-03
+26056.03c   5.4438E-02
+26057.03c   1.2572E-03 
+26058.03c   1.6731E-04
+24050.03c   7.3300E-04
+24052.03c   1.4135E-02
+24053.03c   1.6028E-03
+24054.03c   3.9898E-04
+28058.03c   5.7872E-03
+28060.03c   2.2125E-03
+28061.03c   9.5790E-05
+28062.03c   3.0432E-04
+28064.03c   7.7141E-05
+22046.03c   7.8737E-05
+22047.03c   7.6756E-05
+22048.03c   7.2745E-04
+22049.03c   5.4571E-05
+22050.03c   5.2887E-05
+ 6000.03c   4.7370E-04
+
+% --- Boron rods:
+
+%mat bor     sum tmp 553 rgb 0 0 0 
+%5010.06c    6.571E-02
+%5011.06c    1.643E-02
+%6000.03c    2.053E-02
+
+% --- Water:
+
+% --- 1300 ppm:
+
+mat water   sum tmp 575 rgb 0 0 255 moder lwtr 1001
+1001.03c    4.8410E-02
+8016.03c    2.4205E-02
+5010.03c    1.0381E-05
+5011.03c    4.2049E-05
+
+
+% --- 0 ppm:
+%mat water   sum tmp 575 rgb 0 0 255 moder lwtr 1001
+%1001.03c    4.8410E-02
+%8016.03c    2.4205E-02
+%5010.03c    0.0
+%5011.03c    0.0 
+
+% --- 1300 ppm:
+mat water1  sum tmp 560 rgb 0 0 255 moder lwtr 1001
+1001.03c    5.0362E-02
+8016.03c    2.5181E-02
+5010.03c    1.0800E-05
+5011.03c    4.3744E-05 
+
+%% --- 600 ppm:
+%mat water   sum tmp 560 rgb 0 0 255 moder lwtr 1001
+%1001.03c    5.0362E-02
+%8016.03c    2.5181E-02
+%5010.03c    4.9845E-06
+%5011.03c    2.0190E-05 
+
+%% --- 0 ppm:
+%mat water   sum tmp 560 rgb 0 0 255 moder lwtr 1001
+%1001.03c    5.0362E-02
+%8016.03c    2.5181E-02
+%5010.03c    0.0
+%5011.03c    0.0 
+
+%% --- 0 ppm:
+%mat water   sum tmp 553 rgb 0 0 255 moder lwtr 1001
+%5011.03c    5.1192E-02
+%5010.03c    2.5596E-02
+%8016.03c    0.0
+%1001.03c    0.0 
+
+%% --- 2800 ppm:
+%mat water   sum tmp 553 rgb 0 0 255 moder lwtr 1001
+%5011.03c    6.7076E-02
+%5010.03c    3.3538E-02
+%8016.03c    3.0981E-05
+%1001.03c    1.2549E-04
+
+% --- Thermal scattering data for light water:
+
+therm lwtr 575 lwe7.10t lwe7.12t
+
+% --- Black boundary condition:
+
+set bc 1
+
+set powdens 35.59946E-3
+
+dep daytot 
+
+10.000
+20.000
+30.000
+40.000
+50.000
+60.000
+70.000
+80.000
+90.000
+100.000
+110.000
+120.000
+130.000
+140.000
+150.000
+160.000
+170.000
+180.000
+190.000
+200.000
+210.000
+220.000
+230.000
+240.000
+250.000
+260.000
+270.000
+280.000
+290.000
+300.000
+310.000
+320.000
+330.000
+340.000
+350.000
+360.000
+370.000
+380.000
+390.000
+400.000
+410.000
+420.000
+430.000
+440.000
+450.000
+460.000
+470.000
+480.000
+490.000
+500.000
+510.000
+
+% --- Neutron population and criticality cycles:
+
+set pop 20000 15000 500
+
+% --- Geometry and mesh plots:
+
+%set gcu
+
+plot 3 20000 20000
+plot 33 20000 20000
+plot 2 20000 20000
+mesh 3 5000 5000 
+mesh 2 5000 5000
+mesh 10 3 5000 5000
+
+% --- Decay data library:
+
+set declib "/home/SHARED/Serpent/xsdata/ENDFB7/sss_endfb7.dec"
+
+% --- Neutron induced fission yield library:
+
+set nfylib "/home/SHARED/Serpent/xsdata/ENDFB7/sss_endfb7.nfy"
+
+% --- library
+
+set acelib "/home/SHARED/Serpent/xsdata/ENDFB7/sss_endfb7.xsdata" 
